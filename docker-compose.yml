@@ -1,0 +1,9 @@
+services:
+  tomcat:
+    build: .
+    container_name: practica-servlets
+    ports:
+      - "8080:8080"   # aplicación
+      - "5005:5005"   # depuración remota
+    volumes:
+      - ./logs:/usr/local/tomcat/logs
